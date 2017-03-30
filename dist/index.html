@@ -1,337 +1,332 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+
 <html>
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UFOing!</title>
-  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="styles/style.css">
-  <script src="/horizon/horizon.js"></script>
-</head>
-
-<body>
-  <div class="cover">
-    <div class="cover-image" style="background-image : url('bg.jpg'); opacity:0.7;"></div>
-    <div class="container" style="background: rgba(219, 214, 214, 0.7);">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <h1>Welcome to UFOing</h1>
-          <p>reveal the truth, Post Your Sighting below! &nbsp;</p>
-          <br>
-          <br>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UFOing!</title>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="/horizon/horizon.js"></script>
+  </head>
+  <body>
+    <div class="cover">
+      <div class="cover-image" style="background-image : url('bg.jpg'); opacity:0.7;"></div>
+      <div class="container" style="background: rgba(219, 214, 214, 0.7);">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1>Welcome to UFOing</h1>
+            <p>reveal the truth, Post Your Sighting below! &nbsp;</p>
+            <br>
+            <br>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <form class="form-horizontal text-left" role="form">
-            <div class="form-group">
-              <div class="col-sm-2 text-right">
-                <label for="name" class="control-label">Name</label>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <form class="form-horizontal text-left" role="form">
+              <div class="form-group">
+                <div class="col-sm-2 text-right">
+                  <label for="name" class="control-label">Name</label>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control input-lg" id="name" placeholder="Enter Your name">
+                </div>
               </div>
-              <div class="col-sm-10">
-                <input type="text" class="form-control input-lg" id="name" placeholder="Enter Your name">
+              <div class="form-group">
+                <div class="col-sm-2 text-right">
+                  <label for="location" class="control-label">Location</label>
+                </div>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control input-lg" id="location" placeholder="Enter where you are">
+                </div>
               </div>
-            </div>
-            <div class="form-group">
-              <div class="col-sm-2 text-right">
-                <label for="location" class="control-label">Location</label>
-              </div>
-              <div class="col-sm-10">
-                <input type="text" class="form-control input-lg" id="location" placeholder="Enter where you are">
-              </div>
-            </div>
-            <div class="form-group">
+              <div class="form-group">
                 <div class="col-sm-2 text-right">
                   <label for="img_link" class="control-label">Image Link (Optional)</label>
                 </div>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control input-lg" id="img_link"
-                  placeholder="Enter the link from imgur.com ">
+                  <input type="text" class="form-control input-lg" id="img_link" placeholder="Enter the link from imgur.com ">
                 </div>
                 <div class="col-sm-offset-2 col-sm-10">
-                  <p class="help-block">If you'd like, use imgur.com to upload your image, and copy the link here! </p>
+                  <p class="help-block">If you'd like, use imgur.com to upload your image, and copy the link here!</p>
                 </div>
               </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="text-center">Post Your Sighting, Tell the world!</h1>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center">Post Your Sighting, Tell the world!</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <form role="form">
+              <div class="form-group">
+                <div class="input-group input-group-lg">
+                  <input type="text" class="form-control" placeholder="Tell us more .. be creative">
+                  <span class="input-group-btn">
+                    <a class="btn btn-primary" type="submit">Post</a>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-offset-3 col-md-6">
-          <form role="form">
-            <div class="form-group">
-              <div class="input-group input-group-lg">
-                <input type="text" class="form-control" placeholder="Tell us more .. be creative">
-                <span class="input-group-btn">
-                  <a class="btn btn-primary" type="submit">Post</a>
-                </span>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="media-list">
+              <li class="media">
+                <a class="pull-left" href="#"><img class="img-circle media-object" src="https://ununsplash.imgix.net/photo-1421098518790-5a14be02b243?w=1024&amp;q=50&amp;fm=jpg&amp;s=24665881d66f79925810c2deb7e486b9" height="64" width="64"></a>
+                <div class="media-body">
+                  <h4 class="media-heading">Ryan!</h4>
+                  <p>Location : Fullerton, &nbsp; &nbsp; Time: 8:32pm &nbsp; &nbsp;Date : Mar
+                    30th, 2017&nbsp;</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="btn-link btn-link panel panel-primary remove_heading">
+              <div class="panel-heading">
+                <h3 class="panel-title text-center text-primary">
+                  <i class="fa fa-fw fa-space-shuttle fa-spin"></i>Sighting</h3>
+              </div>
+              <div class="panel-body">
+                <p>I saw something yesterday .... it's in the dorms!I saw something yesterday
+                  .... it's in the dorms! I saw something yesterday .... it's in the dorms!
+                  I saw something yesterday .... it's in the dorms! I saw something yesterday
+                  .... it's in the dorms! I saw something yesterday .... it's in the dorms!I
+                  saw something yesterday .... it's in the dorms! I saw something yesterday
+                  .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
+                  saw something yesterday .... it's in the dorms!I saw something yesterday
+                  .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
+                  saw something yesterday .... it's in the dorms!I saw something yesterday
+                  .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
+                  saw something yesterday .... it's in the dorms!</p>
               </div>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="media-list">
-            <li class="media">
-              <a class="pull-left" href="#"><img class="img-circle media-object" src="https://ununsplash.imgix.net/photo-1421098518790-5a14be02b243?w=1024&amp;q=50&amp;fm=jpg&amp;s=24665881d66f79925810c2deb7e486b9" height="64" width="64"></a>
-              <div class="media-body">
-                <h4 class="media-heading">Ryan!</h4>
-                <p>Location : Fullerton, &nbsp; &nbsp; Time: 8:32pm &nbsp; &nbsp;Date : Mar
-                  30th, 2017&nbsp;</p>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="media-list">
+              <li class="media">
+                <a class="pull-left" href="#"><img class="img-circle media-object" src="https://unsplash.imgix.net/photo-1422222948315-28aadb7a2cb8?w=1024&amp;q=50&amp;fm=jpg&amp;s=cfeadbd7a991e58b553bee29a7eeca55" height="64" width="64"></a>
+                <div class="media-body">
+                  <h4 class="media-heading">Yaser!</h4>
+                  <p>Location : Fullerton, &nbsp; &nbsp; Time: 8:32pm &nbsp; &nbsp;Date : Mar
+                    30th, 2017&nbsp;</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="btn-link btn-link panel panel-primary remove_heading">
+              <div class="panel-heading">
+                <h3 class="panel-title text-center text-primary">
+                  <i class="fa fa-fw fa-space-shuttle fa-spin"></i>Sighting</h3>
               </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="btn-link btn-link panel panel-primary remove_heading">
-            <div class="panel-heading">
-              <h3 class="panel-title text-center text-primary">
-                <i class="fa fa-fw fa-space-shuttle fa-spin"></i>Sighting</h3>
-            </div>
-            <div class="panel-body">
-              <p class="text-muted">I saw something yesterday .... it's in the dorms!I saw something yesterday
-                .... it's in the dorms! I saw something yesterday .... it's in the dorms!
-                I saw something yesterday .... it's in the dorms! I saw something yesterday
-                .... it's in the dorms! I saw something yesterday .... it's in the dorms!I
-                saw something yesterday .... it's in the dorms! I saw something yesterday
-                .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
-                saw something yesterday .... it's in the dorms!I saw something yesterday
-                .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
-                saw something yesterday .... it's in the dorms!I saw something yesterday
-                .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
-                saw something yesterday .... it's in the dorms!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="media-list">
-            <li class="media">
-              <a class="pull-left" href="#"><img class="img-circle media-object" src="https://unsplash.imgix.net/photo-1422222948315-28aadb7a2cb8?w=1024&amp;q=50&amp;fm=jpg&amp;s=cfeadbd7a991e58b553bee29a7eeca55" height="64" width="64"></a>
-              <div class="media-body">
-                <h4 class="media-heading">Yaser!</h4>
-                <p>Location : Fullerton, &nbsp; &nbsp; Time: 8:32pm &nbsp; &nbsp;Date : Mar
-                  30th, 2017&nbsp;</p>
+              <div class="panel-body">
+                <p>I saw something yesterday .... it's in the dorms!I saw something yesterday
+                  .... it's in the dorms! I saw something yesterday .... it's in the dorms!
+                  I saw something yesterday .... it's in the dorms! I saw something yesterday
+                  .... it's in the dorms! I saw something yesterday .... it's in the dorms!I
+                  saw something yesterday .... it's in the dorms! I saw something yesterday
+                  .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
+                  saw something yesterday .... it's in the dorms!I saw something yesterday
+                  .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
+                  saw something yesterday .... it's in the dorms!I saw something yesterday
+                  .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
+                  saw something yesterday .... it's in the dorms!</p>
               </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="btn-link btn-link panel panel-primary remove_heading">
-            <div class="panel-heading">
-              <h3 class="panel-title text-center text-primary">
-                <i class="fa fa-fw fa-space-shuttle fa-spin"></i>Sighting</h3>
-            </div>
-            <div class="panel-body">
-              <p class="text-muted">I saw something yesterday .... it's in the dorms!I saw something yesterday
-                .... it's in the dorms! I saw something yesterday .... it's in the dorms!
-                I saw something yesterday .... it's in the dorms! I saw something yesterday
-                .... it's in the dorms! I saw something yesterday .... it's in the dorms!I
-                saw something yesterday .... it's in the dorms! I saw something yesterday
-                .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
-                saw something yesterday .... it's in the dorms!I saw something yesterday
-                .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
-                saw something yesterday .... it's in the dorms!I saw something yesterday
-                .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
-                saw something yesterday .... it's in the dorms!</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="media-list">
-            <li class="media">
-              <a class="pull-left" href="#"><img class="img-circle media-object" src="https://unsplash.imgix.net/photo-1423439793616-f2aa4356b37e?w=1024&amp;q=50&amp;fm=jpg&amp;s=3b42f9c018b2712544debf4d6a4998ff" height="64" width="64"></a>
-              <div class="media-body">
-                <h4 class="media-heading">Jacob!</h4>
-                <p>Location : Fullerton, &nbsp; &nbsp; Time: 8:32pm &nbsp; &nbsp;Date : Mar
-                  30th, 2017&nbsp;</p>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="media-list">
+              <li class="media">
+                <a class="pull-left" href="#"><img class="img-circle media-object" src="https://unsplash.imgix.net/photo-1423439793616-f2aa4356b37e?w=1024&amp;q=50&amp;fm=jpg&amp;s=3b42f9c018b2712544debf4d6a4998ff" height="64" width="64"></a>
+                <div class="media-body">
+                  <h4 class="media-heading">Jacob!</h4>
+                  <p>Location : Fullerton, &nbsp; &nbsp; Time: 8:32pm &nbsp; &nbsp;Date : Mar
+                    30th, 2017&nbsp;</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="btn-link btn-link panel panel-primary remove_heading">
+              <div class="panel-heading">
+                <h3 class="panel-title text-center text-primary">
+                  <i class="fa fa-fw fa-space-shuttle fa-spin"></i>Sighting</h3>
               </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="btn-link btn-link panel panel-primary remove_heading">
-            <div class="panel-heading">
-              <h3 class="panel-title text-center text-primary">
-                <i class="fa fa-fw fa-space-shuttle fa-spin"></i>Sighting</h3>
-            </div>
-            <div class="panel-body">
-              <p class="text-muted">I saw something yesterday .... it's in the dorms!I saw something yesterday
-                .... it's in the dorms! I saw something yesterday .... it's in the dorms!
-                I saw something yesterday .... it's in the dorms! I saw something yesterday
-                .... it's in the dorms! I saw something yesterday .... it's in the dorms!I
-                saw something yesterday .... it's in the dorms! I saw something yesterday
-                .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
-                saw something yesterday .... it's in the dorms!I saw something yesterday
-                .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
-                saw something yesterday .... it's in the dorms!I saw something yesterday
-                .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
-                saw something yesterday .... it's in the dorms!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="media-list">
-            <li class="media">
-              <a class="pull-left" href="#"><img class="img-circle media-object" src="https://unsplash.imgix.net/photo-1416400453940-65c69d70ad91?w=1024&amp;q=50&amp;fm=jpg&amp;s=54806c1456b35f1d56ca356663d1bdd2" height="64" width="64"></a>
-              <div class="media-body">
-                <h4 class="media-heading">Mike</h4>
-                <p>Location : Fullerton, &nbsp; &nbsp; Time: 8:32pm &nbsp; &nbsp;Date : Mar
-                  30th, 2017&nbsp;</p>
+              <div class="panel-body">
+                <p>I saw something yesterday .... it's in the dorms!I saw something yesterday
+                  .... it's in the dorms! I saw something yesterday .... it's in the dorms!
+                  I saw something yesterday .... it's in the dorms! I saw something yesterday
+                  .... it's in the dorms! I saw something yesterday .... it's in the dorms!I
+                  saw something yesterday .... it's in the dorms! I saw something yesterday
+                  .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
+                  saw something yesterday .... it's in the dorms!I saw something yesterday
+                  .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
+                  saw something yesterday .... it's in the dorms!I saw something yesterday
+                  .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
+                  saw something yesterday .... it's in the dorms!</p>
               </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="btn-link btn-link panel panel-primary remove_heading">
-            <div class="panel-heading">
-              <h3 class="panel-title text-center text-primary">
-                <i class="fa fa-fw fa-space-shuttle fa-spin"></i>Sighting</h3>
-            </div>
-            <div class="panel-body">
-              <p class="text-muted">I saw something yesterday .... it's in the dorms!I saw something yesterday
-                .... it's in the dorms! I saw something yesterday .... it's in the dorms!
-                I saw something yesterday .... it's in the dorms! I saw something yesterday
-                .... it's in the dorms! I saw something yesterday .... it's in the dorms!I
-                saw something yesterday .... it's in the dorms! I saw something yesterday
-                .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
-                saw something yesterday .... it's in the dorms!I saw something yesterday
-                .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
-                saw something yesterday .... it's in the dorms!I saw something yesterday
-                .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
-                saw something yesterday .... it's in the dorms!</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="media-list">
-            <li class="media">
-              <a class="pull-left" href="#"><img class="img-circle media-object" src="https://ununsplash.imgix.net/photo-1421098518790-5a14be02b243?w=1024&amp;q=50&amp;fm=jpg&amp;s=24665881d66f79925810c2deb7e486b9" height="64" width="64"></a>
-              <div class="media-body">
-                <h4 class="media-heading">Ryan!</h4>
-                <p>Location : Fullerton, &nbsp; &nbsp; Time: 8:32pm &nbsp; &nbsp;Date : Mar
-                  30th, 2017&nbsp;</p>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="media-list">
+              <li class="media">
+                <a class="pull-left" href="#"><img class="img-circle media-object" src="https://unsplash.imgix.net/photo-1416400453940-65c69d70ad91?w=1024&amp;q=50&amp;fm=jpg&amp;s=54806c1456b35f1d56ca356663d1bdd2" height="64" width="64"></a>
+                <div class="media-body">
+                  <h4 class="media-heading">Mike</h4>
+                  <p>Location : Fullerton, &nbsp; &nbsp; Time: 8:32pm &nbsp; &nbsp;Date : Mar
+                    30th, 2017&nbsp;</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="btn-link btn-link panel panel-primary remove_heading">
+              <div class="panel-heading">
+                <h3 class="panel-title text-center text-primary">
+                  <i class="fa fa-fw fa-space-shuttle fa-spin"></i>Sighting</h3>
               </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="btn-link btn-link panel panel-primary remove_heading">
-            <div class="panel-heading">
-              <h3 class="panel-title text-center text-primary">
-                <i class="fa fa-fw fa-space-shuttle fa-spin"></i>Sighting</h3>
-            </div>
-            <div class="panel-body">
-              <p class="text-muted">I saw something yesterday .... it's in the dorms!I saw something yesterday
-                .... it's in the dorms! I saw something yesterday .... it's in the dorms!
-                I saw something yesterday .... it's in the dorms! I saw something yesterday
-                .... it's in the dorms! I saw something yesterday .... it's in the dorms!I
-                saw something yesterday .... it's in the dorms! I saw something yesterday
-                .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
-                saw something yesterday .... it's in the dorms!I saw something yesterday
-                .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
-                saw something yesterday .... it's in the dorms!I saw something yesterday
-                .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
-                saw something yesterday .... it's in the dorms!</p>
+              <div class="panel-body">
+                <p>I saw something yesterday .... it's in the dorms!I saw something yesterday
+                  .... it's in the dorms! I saw something yesterday .... it's in the dorms!
+                  I saw something yesterday .... it's in the dorms! I saw something yesterday
+                  .... it's in the dorms! I saw something yesterday .... it's in the dorms!I
+                  saw something yesterday .... it's in the dorms! I saw something yesterday
+                  .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
+                  saw something yesterday .... it's in the dorms!I saw something yesterday
+                  .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
+                  saw something yesterday .... it's in the dorms!I saw something yesterday
+                  .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
+                  saw something yesterday .... it's in the dorms!</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <footer class="section section-primary">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
-          <h1>Don't Tell anyone!&nbsp;</h1>
-          <p>Project 1 &nbsp; - CPSC 473&nbsp;
-            <br>PS. WR ARE NOT ALONE!!!&nbsp;</p>
-        </div>
-        <div class="col-sm-6">
-          <p class="text-info text-right">
-            <br>
-            <br>
-          </p>
-          <div class="row">
-            <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
-              <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
-              <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
-              <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
-              <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
-            </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="media-list">
+              <li class="media">
+                <a class="pull-left" href="#"><img class="img-circle media-object" src="https://ununsplash.imgix.net/photo-1421098518790-5a14be02b243?w=1024&amp;q=50&amp;fm=jpg&amp;s=24665881d66f79925810c2deb7e486b9" height="64" width="64"></a>
+                <div class="media-body">
+                  <h4 class="media-heading">Ryan!</h4>
+                  <p>Location : Fullerton, &nbsp; &nbsp; Time: 8:32pm &nbsp; &nbsp;Date : Mar
+                    30th, 2017&nbsp;</p>
+                </div>
+              </li>
+            </ul>
           </div>
-          <div class="row">
-            <div class="col-md-12 hidden-xs text-right">
-              <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
-              <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
-              <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
-              <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="btn-link btn-link panel panel-primary remove_heading">
+              <div class="panel-heading">
+                <h3 class="panel-title text-center text-primary">
+                  <i class="fa fa-fw fa-space-shuttle fa-spin"></i>Sighting</h3>
+              </div>
+              <div class="panel-body">
+                <p>I saw something yesterday .... it's in the dorms!I saw something yesterday
+                  .... it's in the dorms! I saw something yesterday .... it's in the dorms!
+                  I saw something yesterday .... it's in the dorms! I saw something yesterday
+                  .... it's in the dorms! I saw something yesterday .... it's in the dorms!I
+                  saw something yesterday .... it's in the dorms! I saw something yesterday
+                  .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
+                  saw something yesterday .... it's in the dorms!I saw something yesterday
+                  .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
+                  saw something yesterday .... it's in the dorms!I saw something yesterday
+                  .... it's in the dorms!I saw something yesterday .... it's in the dorms!I
+                  saw something yesterday .... it's in the dorms!</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </footer>
-
-
+    <footer class="section section-primary">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h1>Don't Tell anyone!&nbsp;</h1>
+            <p>Project 1 &nbsp; - CPSC 473&nbsp;
+              <br>PS. WR ARE NOT ALONE!!!&nbsp;</p>
+          </div>
+          <div class="col-sm-6">
+            <p class="text-info text-right">
+              <br>
+              <br>
+            </p>
+            <div class="row">
+              <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
+                <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 hidden-xs text-right">
+                <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
     <script src="scripts/horizonhandler.js" charset="utf-8"></script>
     <script src="scripts/main.js" charset="utf-8"></script>
-</body>
 
 
-</html>
+</body></html>
