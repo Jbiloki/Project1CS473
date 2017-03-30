@@ -2,10 +2,17 @@
 
 # Set-Up
 
-DB install: https://rethinkdb.com/docs/install/
+1- RethinkDB install:
+follow the instructions based on your operating system at
+     https://rethinkdb.com/docs/install/
 
-NPM command: npm install -g horizon
+2- Install Horizon throuhg NPM: 
+    npm install -g horizon
 
-Initialize : init [directory]
+3- Initializing Horizon, navigate to the appropriate directory and type the command: 
+    hr init
+ 
 
-Start DB at local host http://127.0.0.1:8181/: hz serve --dev
+
+4- Start DB at local host http://127.0.0.1:8181/:
+    hz serve --dev
