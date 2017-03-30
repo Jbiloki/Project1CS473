@@ -1,4 +1,18 @@
+body{
+
+  background-color:lightgrey !important;
+
+}
+
 .remove_heading {
 
-  text-decoration: none !important; 
+  text-decoration: none !important;
+  color: #4c5154;
+
+}
+
+.remove_heading:hover{
+
+  background-color: #d3e1ed;
+  color: darkblue;
 }
