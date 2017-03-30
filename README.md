@@ -1,4 +1,4 @@
-# Project1CS473
+# Project_1 CPSC473
 
 # Set-Up
 
