@@ -10,9 +10,10 @@ follow the instructions based on your operating system at
      npm install -g horizon
 
 3- Initializing Horizon, navigate to the appropriate directory and type the command: 
-    hr init [name of project]
+    hr init [directory]
  
 
 
 4- Start DB at local host http://127.0.0.1:8181/:
     hz serve --dev
+    
