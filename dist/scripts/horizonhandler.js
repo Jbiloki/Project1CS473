@@ -25,8 +25,7 @@
       this.$formElement.on('submit', function(event)
     {
         event.preventDefault();
-
-        if($('[id="img_link"]').val() == null)
+        if($('[id="img_link"]').val() == '')
         {
           createMessage(null, $('[id="storyInput"]').val(), $('[id="name"]').val(), $('[id="location"]').val())
         }
@@ -36,8 +35,6 @@
     });
     }
     function createMessage(avatar,text, postName, place) {
-        //const image = new Image();
-        //image.src = avatar;
         let message = {
           text: text,
           avatarURL: avatar,
