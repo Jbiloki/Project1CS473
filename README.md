@@ -7,7 +7,7 @@ follow the instructions based on your operating system at
      https://rethinkdb.com/docs/install/
 
 2- Install Horizon throuhg NPM: 
-    npm install -g horizon
+     npm install -g horizon
 
 3- Initializing Horizon, navigate to the appropriate directory and type the command: 
     hr init
