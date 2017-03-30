@@ -5,13 +5,37 @@
     var $ = window.jQuery;
     const chat = horizon('messages');
 
-    function CreateDB(){
+    function CreateDB(selector){
+      if(!selector){
+        throw new Error('No selector provided');
+      }
+      this.$formElement = $(selector);
+      if (this.$formElement.length === 0) {
+            throw new Error('Could not find element with selector: ' + selector);
+        }
       horizon.onReady(function() {
           console.log("Database Connection Established.");
       });
+      console.log(selector);
       chat.watch().subscribe((docs) => {console.log(docs)});
     }
-    CreateDB.prototype.createMessage = function(avatar,text, postName, place) {
+
+    CreateDB.prototype.submitHandler = function(){
+
+      this.$formElement.on('submit', function(event)
+    {
+        event.preventDefault();
+
+        if($('[id="img_link"]') == null)
+        {
+          createMessage(null, $('[id="storyInput"]'), $('[id="name"]'), $('[id="location"]'))
+        }
+        else {
+          createMessage($('[id="img_link"]'), $('[id="storyInput"]'), $('[id="name"]'), $('[id="location"]'))
+        }
+    });
+    }
+    function createMessage(avatar,text, postName, place) {
         const image = new Image();
         image.src = avatar;
         let message = {
@@ -22,7 +46,7 @@
           location: place
         }
         chat.store(message);
-    }
+    };
 
     CreateDB.prototype.getMessage = function(){
       chat.fetch().subscribe(
