@@ -36,11 +36,11 @@
     });
     }
     function createMessage(avatar,text, postName, place) {
-        const image = new Image();
-        image.src = avatar;
+        //const image = new Image();
+        //image.src = avatar;
         let message = {
           text: text,
-          avatarURL: image.src,
+          avatarURL: avatar,
           datetime: new Date(),
           author: postName,
           location: place
