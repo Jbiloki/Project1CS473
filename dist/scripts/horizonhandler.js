@@ -9,12 +9,17 @@
       horizon.onReady(function() {
           console.log("Database Connection Established.");
       });
+      chat.watch().subscribe((docs) => {console.log(docs)});
     }
-    CreateDB.prototype.createMessage = function(text, postName) {
+    CreateDB.prototype.createMessage = function(avatar,text, postName, place) {
+        const image = new Image();
+        image.src = avatar;
         let message = {
           text: text,
+          avatarURL: image.src,
           datetime: new Date(),
-          author: postName
+          author: postName,
+          location: place
         }
         chat.store(message);
     }
@@ -29,6 +34,18 @@
 
         (err) => {
           console.log(err);
+        })
+    }
+
+    CreateDB.prototype.removeMessage = function(){
+    }
+
+    CreateDB.prototype.resetDataBase = function(){
+      chat.fetch().subscribe(
+        (items) => {
+          items.forEach((item ) => {
+            chat.remove(item);
+          })
         })
     }
     horizon.connect();
