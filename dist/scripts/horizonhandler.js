@@ -17,7 +17,9 @@
           console.log("Database Connection Established.");
       });
       console.log(selector);
-      chat.watch().subscribe((docs) => {console.log(docs)});
+      chat.watch().subscribe((docs) => {console.log(docs)
+          
+      });
     }
 
     CreateDB.prototype.submitHandler = function(){
