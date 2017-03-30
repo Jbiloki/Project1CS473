@@ -26,12 +26,12 @@
     {
         event.preventDefault();
 
-        if($('[id="img_link"]') == null)
+        if($('[id="img_link"]').val() == null)
         {
-          createMessage(null, $('[id="storyInput"]'), $('[id="name"]'), $('[id="location"]'))
+          createMessage(null, $('[id="storyInput"]').val(), $('[id="name"]').val(), $('[id="location"]').val())
         }
         else {
-          createMessage($('[id="img_link"]'), $('[id="storyInput"]'), $('[id="name"]'), $('[id="location"]'))
+          createMessage($('[id="img_link"]').val(), $('[id="storyInput"]').val(), $('[id="name"]').val(), $('[id="location"]').val())
         }
     });
     }
