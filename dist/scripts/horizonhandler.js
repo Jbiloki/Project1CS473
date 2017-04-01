@@ -34,7 +34,13 @@
         else {
           createMessage($('[id="img_link"]').val(), $('[id="storyInput"]').val(), $('[id="name"]').val(), $('[id="location"]').val())
         }
+        
+        // clear/rest form after submit
+        $("form").trigger("reset");
+
     });
+
+
     }
 
     function row(dbObject){
