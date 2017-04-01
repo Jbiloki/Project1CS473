@@ -9,7 +9,7 @@
  +    npm install -g horizon
 
 3- Initializing Horizon, navigate to the appropriate directory and type the command: <br>
- +  hr init [directory]
+ +  hr init
  
 
 
