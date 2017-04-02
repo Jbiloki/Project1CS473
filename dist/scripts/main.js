@@ -6,6 +6,7 @@
     var Data = new DataBase(FORM_SELECTOR);
 
     Data.submitHandler();
+    Data.correctImgur();
 
 })(window);
 
