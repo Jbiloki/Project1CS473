@@ -20,7 +20,7 @@
 
 1- With the server running, navigate to local host http://127.0.0.1:8181/. The webapp will appear on screen.
 
-2- Enter your Name, Location, an optional imgur link for a thumbnail, and a brief description of what you saw!
+2- Enter your name, location, an optional imgur link for a thumbnail, and a brief description of what you saw!
 
 3- When you are ready to submit, click the blue button next to the description field marked "Post".
 
