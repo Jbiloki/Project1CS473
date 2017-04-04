@@ -7,6 +7,7 @@
 
     Data.submitHandler();
     Data.correctImgur();
+    Data.displayRow();
 
 })(window);
 
