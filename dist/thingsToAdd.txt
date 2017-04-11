@@ -1,0 +1,79 @@
+horizonhandler.js
+-----------------
+
+// Submit handler
+this.$formElement.on('submit', function(event) {
+            event.preventDefault();
+
+            if ($('[id="img_link"]').val() == '') {
+                createMessage(null, $('[id="storyInput"]').val(), $('[id="name"]').val(), $('[id="location"]').val());
+            } else {
+                createMessage($('[id="img_link"]').val(), $('[id="storyInput"]').val(), $('[id="name"]').val(), $('[id="location"]').val());
+            }
+
+
+            // clear/rest form after submit
+            $("form").trigger("reset");
+            $('[id="name"]').focus(); // <------------ADD THIS in horizonhandler.js
+        });
+
+// Name validation ADDED IN horizonhandler.js
+CreateDB.prototype.correctName = function() {
+        this.$formElement.on('input', '[id="name"]', function(event) {
+            event.target.setCustomValidity('') //to prevent the valid prompt from showing up when reentering a link
+            var name = event.target.value;
+
+            console.log(name);
+
+            if (nameValidation(name)) {
+                console.log('true');
+                event.target.setCustomValidity('');
+            } else {
+                console.log('false');
+                event.target.setCustomValidity('Name must be capitalized with no numbers or special characters');
+            }
+        });
+    };
+
+// Location validation ADDED IN horizonhandler.js
+    CreateDB.prototype.correctLocation = function() {
+        this.$formElement.on('input', '[id="location"]', function(event) {
+            event.target.setCustomValidity('') //to prevent the valid prompt from showing up when reentering a link
+            var location = event.target.value;
+
+            console.log(location);
+
+            if (locationValidation(location)) {
+                console.log('true');
+                event.target.setCustomValidity('');
+            } else {
+                console.log('false');
+                event.target.setCustomValidity('City must be capitalized with no numbers or special characters');
+            }
+        });
+    };
+    
+    // May be one or more words, must be capitalized, no numbers or special chars atm ADDED IN horizonhandler.js
+    function nameValidation(name) {
+        return /^[A-Z][a-z]+(?:[ ][A-Z][a-z]+)*$/.test(name);
+    };
+
+    //Any string that starts with capital letter and contains no numbers or special chars, or 'Fullerton, CA' format
+    // Or 'Huntington Beach, CA' ADDED IN horizonhandler.js
+    function locationValidation(location) {
+        return /^[A-Z][a-z]+(?:[ ][A-Z][a-z]+)*(?:[,][ ][A-Z]{2})?$/.test(location);
+    };
+    
+    // Delete message ADDED IN horizonhandler.js
+    CreateDB.prototype.removeMessage = function(item) {
+        // added this
+        chat.remove(item).subscribe((id) => {console.log(id)})
+    }
+    
+    
+    main.js
+    -------
+    
+    // name and location validation functions
+    Data.correctName();
+    Data.correctLocation();
