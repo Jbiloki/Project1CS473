@@ -1,6 +1,7 @@
 horizonhandler.js
 -----------------
 
+1)
 // Submit handler
 this.$formElement.on('submit', function(event) {
             event.preventDefault();
@@ -17,6 +18,7 @@ this.$formElement.on('submit', function(event) {
             $('[id="name"]').focus(); // <------------ADD THIS in horizonhandler.js
         });
 
+2)
 // Name validation ADDED IN horizonhandler.js
 CreateDB.prototype.correctName = function() {
         this.$formElement.on('input', '[id="name"]', function(event) {
@@ -34,7 +36,8 @@ CreateDB.prototype.correctName = function() {
             }
         });
     };
-
+    
+3)
 // Location validation ADDED IN horizonhandler.js
     CreateDB.prototype.correctLocation = function() {
         this.$formElement.on('input', '[id="location"]', function(event) {
@@ -53,27 +56,38 @@ CreateDB.prototype.correctName = function() {
         });
     };
     
-    // May be one or more words, must be capitalized, no numbers or special chars atm ADDED IN horizonhandler.js
+4)
+// May be one or more words, must be capitalized, no numbers or special chars atm ADDED IN horizonhandler.js
     function nameValidation(name) {
         return /^[A-Z][a-z]+(?:[ ][A-Z][a-z]+)*$/.test(name);
     };
 
+5)
     //Any string that starts with capital letter and contains no numbers or special chars, or 'Fullerton, CA' format
     // Or 'Huntington Beach, CA' ADDED IN horizonhandler.js
     function locationValidation(location) {
         return /^[A-Z][a-z]+(?:[ ][A-Z][a-z]+)*(?:[,][ ][A-Z]{2})?$/.test(location);
     };
     
+6)    
     // Delete message ADDED IN horizonhandler.js
     CreateDB.prototype.removeMessage = function(item) {
         // added this
         chat.remove(item).subscribe((id) => {console.log(id)})
     }
-    
-    
-    main.js
-    -------
-    
+ 
+ 
+main.js
+-------
+7)    
     // name and location validation functions
     Data.correctName();
     Data.correctLocation();
+
+index.html
+----------
+8)
+add 'autofocus' to 'name' field in index.html
+
+9)
+add 'required' to 'name' and 'location' fields in index.html
