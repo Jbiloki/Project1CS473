@@ -96,7 +96,7 @@
     function imgurValidation(imgur_link) {
         return /.*imgur\.com\/.+$/.test(imgur_link);
     };
-    /*
+
     function row(item) {
         var $div1 = $('<div></div>', {
             'class': 'section'
@@ -188,8 +188,8 @@
         $div1.append($div2);
 
         this.$formElement = $div1;
-    }*/
-
+    }
+    /*
     // Generate the code for posting objects to the screen
     function row(dbObject) {
         chat.fetch().subscribe(
@@ -258,7 +258,7 @@
                     $img.append(picture);
                 })
             })
-    }
+    }*/
 
     // Create a new 'message' object
     function createMessage(avatar, text, postName, place) {
