@@ -6,14 +6,11 @@
     var horizon = Horizon();
     // Import jQuery
     var $ = window.jQuery;
-<<<<<<< HEAD
     var pageLoaded;
-=======
     // Get access to the messages collection
->>>>>>> origin/master
     const chat = horizon('messages');
-	
-	// Database constructor
+
+    // Database constructor
     function CreateDB(selector) {
         this.pageLoaded = false;
         if (!selector) {
@@ -50,8 +47,8 @@
         var month = date.getMonth() + 1;
         return "&nbsp; &nbsp;Time: " + strTime + "&nbsp; &nbsp; Date: " + month + "/" + date.getDate() + "/" + date.getFullYear();
     }
-	
-	// Handler to process submits to database
+
+    // Handler to process submits to database
     CreateDB.prototype.submitHandler = function() {
 
         var imgur = $("#img_link")[0];
@@ -59,9 +56,9 @@
         console.log(imgur);
         console.log(imgurTxt);
 
-		// When submit button is pressed, check if the user provides an image link
-		// if not, create a new object with name, location, text, and img_link set to null
-		// otherwise, create new object with above values AND image link
+        // When submit button is pressed, check if the user provides an image link
+        // if not, create a new object with name, location, text, and img_link set to null
+        // otherwise, create new object with above values AND image link
         this.$formElement.on('submit', function(event) {
             event.preventDefault();
 
@@ -78,10 +75,10 @@
         });
     }
 
-	// On input, check if imgur link is valid. Prompt user if invalid input.
+    // On input, check if imgur link is valid. Prompt user if invalid input.
     CreateDB.prototype.correctImgur = function() {
         this.$formElement.on('input', '[id="img_link"]', function(event) {
-			//to prevent the valid prompt from showing up when reentering a link
+            //to prevent the valid prompt from showing up when reentering a link
             event.target.setCustomValidity('')
             var img_link = event.target.value;
 
@@ -95,12 +92,11 @@
         });
     };
 
-	// Validate imgur link input
+    // Validate imgur link input
     function imgurValidation(imgur_link) {
         return /.*imgur\.com\/.+$/.test(imgur_link);
     };
-<<<<<<< HEAD
-
+    /*
     function row(item) {
         var $div1 = $('<div></div>', {
             'class': 'section'
@@ -192,10 +188,9 @@
         $div1.append($div2);
 
         this.$formElement = $div1;
+    }*/
 
-=======
-	
-	// Generate the code for posting objects to the screen
+    // Generate the code for posting objects to the screen
     function row(dbObject) {
         chat.fetch().subscribe(
             (items) => {
@@ -263,10 +258,9 @@
                     $img.append(picture);
                 })
             })
->>>>>>> origin/master
     }
-	
-	// Create a new 'message' object
+
+    // Create a new 'message' object
     function createMessage(avatar, text, postName, place) {
         let message = {
             text: text,
@@ -278,14 +272,9 @@
         chat.store(message);
 
     };
-<<<<<<< HEAD
 
-    /*CreateDB.prototype.getMessage = function() {
-=======
-	
-	// Print messages to the console
+    // Print messages to the console
     CreateDB.prototype.getMessage = function() {
->>>>>>> origin/master
         chat.fetch().subscribe(
             (items) => {
                 items.forEach((item) => {
@@ -296,64 +285,58 @@
             (err) => {
                 console.log(err);
             })
-    }*/
+    }
 
     CreateDB.prototype.removeMessage = function(item) {
 
     }
-    /*CreateDB.prototype.loadPage = function(){
-      chat.fetch().subscribe(
-          (items) => {
-              items.forEach((item) => {
-                  var rowElement = new row(item);
-                  this.$formElement.append(rowElement.$formElement);
-              })
-          },
-          (err) => {
-              console.log(err);
-          });
-          this.pageLoaded = true;
-    }*/
+    CreateDB.prototype.loadPage = function() {
+        chat.fetch().subscribe(
+            (items) => {
+                items.forEach((item) => {
+                    var rowElement = new row(item);
+                    this.$formElement.append(rowElement.$formElement);
+                })
+            },
+            (err) => {
+                console.log(err);
+            });
+        this.pageLoaded = true;
+    }
     CreateDB.prototype.displayRow = function() {
-        console.log("Before" , this.pageLoaded);
-            chat.order("datetime" , "ascending").watch().subscribe(allChannels => {
-                //console.log(allChannels);
-                if(this.pageLoaded === true){
+        //console.log("Before", this.pageLoaded);
+        chat.order("datetime", "ascending").watch().subscribe(allChannels => {
+            //console.log(allChannels);
+            if (this.pageLoaded === true) {
                 var check = Object.keys(allChannels).length - 1;
                 var last = allChannels[check];
                 var rowElement = new row(last);
-                console.log(allChannels);
-                console.log(check);
-                console.log(last);
+                //console.log(allChannels);
+                //console.log(check);
+                //console.log(last);
                 this.$formElement.append(rowElement.$formElement);
-            }
-          else{
-            chat.order("datetime" , "ascending").fetch().subscribe(
-                (items) => {
-                    items.forEach((item) => {
-                        var rowElement = new row(item);
-                        this.pageLoaded = true;
-                        this.$formElement.append(rowElement.$formElement);
+            } else {
+                chat.order("datetime", "ascending").fetch().subscribe(
+                    (items) => {
+                        items.forEach((item) => {
+                            var rowElement = new row(item);
+                            this.pageLoaded = true;
+                            this.$formElement.append(rowElement.$formElement);
+                        })
                     })
-                })
-              }
-                (err) => {
-                    console.log(err);
-                };
+            }
+            (err) => {
+                console.log(err);
+            };
 
-          })
-          console.log(this.pageLoaded);
+        })
+        console.log(this.pageLoaded);
     }
-<<<<<<< HEAD
 
-
-=======
-	
-	// Remove messages from the database
+    // Remove messages from the database
     CreateDB.prototype.removeMessage = function() {}
-	
-	// Remove all messages from the database, return to default
->>>>>>> origin/master
+
+    // Remove all messages from the database, return to default
     CreateDB.prototype.resetDataBase = function() {
         chat.fetch().subscribe(
             (items) => {
@@ -362,12 +345,7 @@
                 })
             })
     }
-<<<<<<< HEAD
-
-
-=======
     // Establish a Horizon connection
->>>>>>> origin/master
     horizon.connect();
     // Attach module code to the namespace
     App.CreateDB = CreateDB;
