@@ -181,7 +181,6 @@
         $div8.append('Sighting');
         $div9.append(text);
         $div9.append($('<br></br><hr><br></br>'));
-        console.log(item.avatarURL);
         if (item.avatarURL == 'https://cdn3.iconfinder.com/data/icons/avatars-9/145/Avatar_Alien-512.png') {
             $img.attr('src', 'https://unsplash.imgix.net/photo-1422222948315-28aadb7a2cb8?w=1024&amp;q=50&amp;fm=jpg&amp;s=cfeadbd7a991e58b553bee29a7eeca55');
         } else {
