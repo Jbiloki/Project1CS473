@@ -71,9 +71,46 @@
 
             // clear/rest form after submit
             $("form").trigger("reset");
+            $('[id="name"]').focus();
 
         });
     }
+
+    CreateDB.prototype.correctName = function() {
+        this.$formElement.on('input', '[id="name"]', function(event) {
+            event.target.setCustomValidity('') //to prevent the valid prompt from showing up when reentering a link
+            var name = event.target.value;
+
+            console.log(name);
+
+            if (nameValidation(name)) {
+                console.log('true');
+                event.target.setCustomValidity('');
+            } else {
+                console.log('false');
+                event.target.setCustomValidity('Name must be in the form of John or John Smith with no numbers or special characters');
+            }
+        });
+    };
+
+    CreateDB.prototype.correctLocation = function() {
+        this.$formElement.on('input', '[id="location"]', function(event) {
+            event.target.setCustomValidity('') //to prevent the valid prompt from showing up when reentering a link
+            var location = event.target.value;
+
+            console.log(location);
+
+            if (locationValidation(location)) {
+                console.log('true');
+                event.target.setCustomValidity('');
+            } else {
+                console.log('false');
+                event.target.setCustomValidity('City must be in the form of Fullerton, CA or Fullerton with no numbers or special characters');
+            }
+        });
+    };
+
+
 
     // On input, check if imgur link is valid. Prompt user if invalid input.
     CreateDB.prototype.correctImgur = function() {
@@ -87,9 +124,17 @@
             if (imgurValidation(img_link) || img_link == '') {
                 event.target.setCustomValidity('');
             } else {
-                event.target.setCustomValidity('Please enter a valid imgur link');
+                event.target.setCustomValidity('Please enter a valid imgur link, make sure it has a valid image extension');
             }
         });
+    };
+
+    function nameValidation(name) {
+        return /^[A-Z][a-z]+(?:[ ][A-Z][a-z]+)*$/.test(name);
+    };
+
+    function locationValidation(location) {
+        return /^[A-Z][a-z]+(?:[ ][A-Z][a-z]+)*(?:[,][ ][A-Z]{2})?$/.test(location);
     };
 
     // Validate imgur link input
@@ -98,6 +143,11 @@
     };
 
     function row(item) {
+
+        var $div0 = $('<div></div>', {
+            'class': 'page-list'
+        });
+
         var $div1 = $('<div></div>', {
             'class': 'section'
         });
@@ -122,7 +172,7 @@
         });
         var $img = $('<img></img>', {
             'class': 'img-circle media-object',
-            'src': item.avatarURL, //'https://unsplash.imgix.net/photo-1422222948315-28aadb7a2cb8?w=1024&amp;q=50&amp;fm=jpg&amp;s=cfeadbd7a991e58b553bee29a7eeca55',
+            'src': 'https://cdn3.iconfinder.com/data/icons/avatars-9/145/Avatar_Alien-512.png',
             'height': '64',
             'width': '64'
         });
@@ -181,6 +231,7 @@
         $div8.append('Sighting');
         $div9.append(text);
         $div9.append($('<br></br><hr><br></br>'));
+        console.log(item.avatarURL);
         if (item.avatarURL == 'https://cdn3.iconfinder.com/data/icons/avatars-9/145/Avatar_Alien-512.png') {
             $img.attr('src', 'https://unsplash.imgix.net/photo-1422222948315-28aadb7a2cb8?w=1024&amp;q=50&amp;fm=jpg&amp;s=cfeadbd7a991e58b553bee29a7eeca55');
         } else {
@@ -200,78 +251,10 @@
         $div3.append($div4);
         $div2.append($div3);
         $div1.append($div2);
-        this.$formElement = $div1;
+        $div0.append($div1);
+        this.$formElement = $div0;
+
     }
-    /*
-    // Generate the code for posting objects to the screen
-    function row(dbObject) {
-        chat.fetch().subscribe(
-            (items) => {
-                items.forEach((item) => {
-                    var $div1 = $('<div></div>', {
-                        'class': 'section'
-                    });
-                    var $div2 = $('<div></div>', {
-                        'class': 'container'
-                    });
-                    var $div3 = $('<div></div>', {
-                        'class': 'row'
-                    });
-                    var $div4 = $('<div></div>', {
-                        'class': 'col-md-12'
-                    });
-                    var $ul = $('<ul></ul>', {
-                        'class': 'media-list'
-                    });
-                    var $li = $('<li></li>', {
-                        'class': 'media'
-                    });
-                    var $a = $('<a></a>', {
-                        'class': 'pull-left',
-                        'href': '#'
-                    });
-                    var $img = $('<img></img>', {
-                        'class': 'img-circle media-object',
-                        'src': 'https://unsplash.imgix.net/photo-1422222948315-28aadb7a2cb8?w=1024&amp;q=50&amp;fm=jpg&amp;s=cfeadbd7a991e58b553bee29a7eeca55',
-                        'height': '64',
-                        'width': '64'
-                    });
-                    var $div5 = $('<div></div>', {
-                        'class': 'media-body'
-                    });
-                    var $h4name = $('<h4></h4>', {
-                        'class': 'media-heading',
-                    });
-                    var $ploct = $('<p></p>', {});
-                    var $div6 = $('<div></div>', {
-                        'class': 'btn-link btn-link panel panel-primary remove_heading'
-                    });
-                    var $div7 = $('<div></div>', {
-                        'class': 'panel-heading'
-                    });
-                    var $div8 = $('<h3></h3>', {
-                        'class': 'panel-title text-center text-primary'
-                    });
-                    var $i = $('<i></i>', {
-                        'class': 'fa fa-fw fa-space-shuttle fa-spin'
-                    });
-                    var $div9 = $('<div></div>', {
-                        'class': 'panel-body'
-                    });
-                    var $text = $('<p></p>', {});
-                    var name = item.author;
-                    var text = item.text;
-                    var picture = item.avatarURL;
-                    var location = item.location;
-                    var dateTime = item.datetime;
-                    $text.append(name);
-                    $h4name.append(name);
-                    $ploct.append(location + ' ' + dateTime);
-                    $i.append('Sighting');
-                    $img.append(picture);
-                })
-            })
-    }*/
 
     // Create a new 'message' object
     function createMessage(avatar, text, postName, place) {
@@ -300,9 +283,6 @@
             })
     }
 
-    CreateDB.prototype.removeMessage = function(item) {
-
-    }
     CreateDB.prototype.loadPage = function() {
         chat.fetch().subscribe(
             (items) => {
@@ -316,7 +296,7 @@
             });
         this.pageLoaded = true;
     }
-    CreateDB.prototype.displayRow = function() {
+    CreateDB.prototype.displayRow = function(cb) {
         //console.log("Before", this.pageLoaded);
         chat.order("datetime", "ascending").watch().subscribe(allChannels => {
             //console.log(allChannels);
@@ -335,8 +315,10 @@
                             var rowElement = new row(item);
                             this.pageLoaded = true;
                             this.$formElement.append(rowElement.$formElement);
-                        })
-                    })
+                        });
+                        cb(this.$formElement);
+
+                    });
             }
             (err) => {
                 console.log(err);
@@ -346,8 +328,6 @@
         console.log(this.pageLoaded);
     }
 
-    // Remove messages from the database
-    CreateDB.prototype.removeMessage = function() {}
 
     // Remove all messages from the database, return to default
     CreateDB.prototype.resetDataBase = function() {

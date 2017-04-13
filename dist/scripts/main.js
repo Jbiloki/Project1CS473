@@ -5,9 +5,19 @@
     var DataBase = App.CreateDB;
     var Data = new DataBase(FORM_SELECTOR);
 
+    var Pagination = App.Pagination;
+    var Page = new Pagination(FORM_SELECTOR);
+
+    // name and location validation functions
+    Data.correctName();
+    Data.correctLocation();
+
     Data.submitHandler();
     Data.correctImgur();
-    Data.displayRow();
+    //call Pagination once the rows are fetched
+    Data.displayRow(function(result) {
+        Page.pagination(result);
+    });
 
 })(window);
 
