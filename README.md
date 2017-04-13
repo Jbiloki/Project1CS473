@@ -1,4 +1,12 @@
-# Project_1 CPSC473
+# Project_1 CPSC473 Section 1 UFO
+# By:
+   + Jacob Biloki
+   + Yaser Algomia
+   + Mike Yan
+   + Ryan Hodgeson
+   + Samir Mandal
+   + Waymon Ho
+   
 # Set-Up
 
 1- RethinkDB install: <br>
