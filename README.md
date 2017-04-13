@@ -36,10 +36,10 @@ Quick Note: pagination works after refershing the page. 5 posts per page.
 
 2- Scripts: 
    + horizonhandler.js - this script handles all the horizon api interactions with our website. It includes methods for retrieving, adding, and posting entries from horizon. 
-      ++ function CreateDB - creates the database 
-      ++ function SubmitHandler - checks the post command and updates the page
-      ++ function row - Adds the row (entry) onto the website 
-      ++ function displayRow - uses the Horizon Communications API to fetch/watch horizon entries 
+      +  function CreateDB - creates the database 
+      +  function SubmitHandler - checks the post command and updates the page
+      +  function row - Adds the row (entry) onto the website 
+      +  function displayRow - uses the Horizon Communications API to fetch/watch horizon entries 
    
    + main.js - The main function initializes and sets up the application on the website. It also includes the jokes from the UFO website front page. 
    
