@@ -27,3 +27,5 @@
 4- Congratulations! Your personal and very important UFO experience will be updated on the page so the world will know! Go
    ahead and scroll through the other posts and see what others have been talking about. Don't forget to check out some of
    our favorite jokes near the title at the top for some comic relief!
+
+Quick Note: pagination works after refershing the page. 5 posts per page. 
