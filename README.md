@@ -5,7 +5,7 @@
 + follow the instructions based on your operating system at <br>
    https://rethinkdb.com/docs/install/
 
-2- Install Horizon throuhg NPM: <br>
+2- Install Horizon through NPM: <br>
  +    npm install -g horizon
 
 3- Initializing Horizon, navigate to the appropriate directory and type the command: <br>
@@ -20,7 +20,7 @@
 
 1- With the server running, navigate to local host http://127.0.0.1:8181/. The webapp will appear on screen.
 
-2- Enter your name, location, an optional imgur link for a thumbnail, and a brief description of what you saw!
+2- Enter your name, location, an optional imgur link (must be directly linked to the file (.jpg, .png, etc.) for a thumbnail and image post, and a brief description of what you saw!
 
 3- When you are ready to submit, click the blue button next to the description field marked "Post".
 
