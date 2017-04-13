@@ -94,7 +94,7 @@
 
     // Validate imgur link input
     function imgurValidation(imgur_link) {
-        return /.*imgur\.com\/.+\.png$/.test(imgur_link);
+        return /.*imgur\.com\/.+\.(png|jpg|jpeg|apng|tiff|pdf|xcf)$/.test(imgur_link);
     };
 
     function row(item) {
@@ -150,10 +150,12 @@
             'class': 'panel-body'
         });
         var $mainImage = $('<img></img>', {
-            'class': 'rounded',
+            'class': 'detail-image',
             'src': item.avatarURL,
             'alt': 'Responsive image'
         });
+
+        var $center = $('<center></center>');
         var $text = $('<p></p>', {});
         var name = item.author;
         var text = item.text;
@@ -178,12 +180,13 @@
         $div8.append($i);
         $div8.append('Sighting');
         $div9.append(text);
+        $div9.append($('<br></br><hr><br></br>'));
         if (item.avatarURL == null) {
             $img.attr('src', 'https://unsplash.imgix.net/photo-1422222948315-28aadb7a2cb8?w=1024&amp;q=50&amp;fm=jpg&amp;s=cfeadbd7a991e58b553bee29a7eeca55');
         } else {
             $img.append(picture);
-            $div9.append($mainImage);
-
+            $center.append($mainImage);
+            $div9.append($center);
         }
         $div7.append($div8);
 
