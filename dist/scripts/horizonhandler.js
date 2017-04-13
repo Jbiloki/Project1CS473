@@ -149,6 +149,11 @@
         var $div9 = $('<div></div>', {
             'class': 'panel-body'
         });
+        var $mainImage = $('<img></img>', {
+            'class': 'rounded',
+            'src': item.avatarURL,
+            'alt': 'Responsive image'
+        });
         var $text = $('<p></p>', {});
         var name = item.author;
         var text = item.text;
@@ -158,12 +163,6 @@
         $text.append(name);
         $h4name.append(name);
         $ploct.append(location + ' ' + dateTime);
-        if (item.avatarURL == null) {
-            $img.attr('src', 'https://unsplash.imgix.net/photo-1422222948315-28aadb7a2cb8?w=1024&amp;q=50&amp;fm=jpg&amp;s=cfeadbd7a991e58b553bee29a7eeca55');
-
-        } else {
-            $img.append(picture);
-        }
 
         dateTime = formatDate(dateTime);
 
@@ -179,6 +178,13 @@
         $div8.append($i);
         $div8.append('Sighting');
         $div9.append(text);
+        if (item.avatarURL == null) {
+            $img.attr('src', 'https://unsplash.imgix.net/photo-1422222948315-28aadb7a2cb8?w=1024&amp;q=50&amp;fm=jpg&amp;s=cfeadbd7a991e58b553bee29a7eeca55');
+        } else {
+            $img.append(picture);
+            $div9.append($mainImage);
+
+        }
         $div7.append($div8);
 
         $div6.append($div7);
@@ -191,7 +197,6 @@
         $div3.append($div4);
         $div2.append($div3);
         $div1.append($div2);
-
         this.$formElement = $div1;
     }
     /*
