@@ -29,3 +29,7 @@ body{
   background-color: #d3e1ed;
   color: darkblue;
 }
+
+.detail-image{
+  width:50%;
+}
