@@ -63,7 +63,7 @@
             event.preventDefault();
 
             if ($('[id="img_link"]').val() == '') {
-                createMessage(null, $('[id="storyInput"]').val(), $('[id="name"]').val(), $('[id="location"]').val())
+                createMessage('https://cdn3.iconfinder.com/data/icons/avatars-9/145/Avatar_Alien-512.png', $('[id="storyInput"]').val(), $('[id="name"]').val(), $('[id="location"]').val())
             } else {
                 createMessage($('[id="img_link"]').val(), $('[id="storyInput"]').val(), $('[id="name"]').val(), $('[id="location"]').val())
             }
@@ -94,7 +94,7 @@
 
     // Validate imgur link input
     function imgurValidation(imgur_link) {
-        return /.*imgur\.com\/.+$/.test(imgur_link);
+        return /.*imgur\.com\/.+\.png$/.test(imgur_link);
     };
 
     function row(item) {
@@ -122,7 +122,7 @@
         });
         var $img = $('<img></img>', {
             'class': 'img-circle media-object',
-            'src': 'https://unsplash.imgix.net/photo-1422222948315-28aadb7a2cb8?w=1024&amp;q=50&amp;fm=jpg&amp;s=cfeadbd7a991e58b553bee29a7eeca55',
+            'src': item.avatarURL, //'https://unsplash.imgix.net/photo-1422222948315-28aadb7a2cb8?w=1024&amp;q=50&amp;fm=jpg&amp;s=cfeadbd7a991e58b553bee29a7eeca55',
             'height': '64',
             'width': '64'
         });
@@ -158,7 +158,12 @@
         $text.append(name);
         $h4name.append(name);
         $ploct.append(location + ' ' + dateTime);
-        $img.append(picture);
+        if (item.avatarURL == null) {
+            $img.attr('src', 'https://unsplash.imgix.net/photo-1422222948315-28aadb7a2cb8?w=1024&amp;q=50&amp;fm=jpg&amp;s=cfeadbd7a991e58b553bee29a7eeca55');
+
+        } else {
+            $img.append(picture);
+        }
 
         dateTime = formatDate(dateTime);
 
